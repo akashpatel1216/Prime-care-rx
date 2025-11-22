@@ -46,7 +46,7 @@ export default function About() {
               <span className="text-primary-600">Priority</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              We're delighted to serve the communities of Spring Hill, FL. We offer complimentary free home delivery service for the disabled and elderly, ensuring everyone has access to the medications and care they need.
+              We&apos;re delighted to serve the communities of Spring Hill, FL. We offer complimentary free home delivery service for the disabled and elderly, ensuring everyone has access to the medications and care they need.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Our team of experienced pharmacists and healthcare professionals are committed to going beyond just filling prescriptions. We take the time to understand your unique health needs, answer your questions, and provide guidance that empowers you to take control of your wellness journey. With contactless delivery and curbside pickup options, we make healthcare convenient and accessible.

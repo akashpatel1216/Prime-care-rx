@@ -94,7 +94,7 @@ export default function Testimonials() {
 
             {/* Content */}
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 relative z-10">
-              "{testimonials[currentIndex].content}"
+              &ldquo;{testimonials[currentIndex].content}&rdquo;
             </p>
 
             {/* Author */}

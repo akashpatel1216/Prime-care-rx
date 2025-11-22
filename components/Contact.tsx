@@ -75,7 +75,7 @@ export default function Contact() {
             Contact Us Today
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have questions? We're here to help. Reach out to us and we'll respond as soon as possible.
+            Have questions? We&apos;re here to help. Reach out to us and we&apos;ll respond as soon as possible.
           </p>
         </motion.div>
 

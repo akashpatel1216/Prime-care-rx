@@ -46,7 +46,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="text-xl md:text-2xl text-primary-100 mb-8 leading-relaxed"
             >
-              Experience personalized pharmaceutical care with complimentary free home delivery for disabled and elderly patients. We're here to serve our Spring Hill community.
+              Experience personalized pharmaceutical care with complimentary free home delivery for disabled and elderly patients. We&apos;re here to serve our Spring Hill community.
             </motion.p>
 
             <motion.div
