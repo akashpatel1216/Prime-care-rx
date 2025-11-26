@@ -50,9 +50,9 @@ export default function Contact() {
     },
     {
       icon: Clock,
-      title: "Open Now",
-      content: "Free Home Delivery Available",
-      content2: "Contactless & Curbside Pickup",
+      title: "Hours",
+      content: "Mon-Fri: 9am-5pm",
+      content2: "Sat-Sun: Closed",
       color: "from-orange-500 to-orange-600",
     },
   ];
@@ -74,13 +74,34 @@ export default function Contact() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Contact Us Today
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Have questions? We&apos;re here to help. Reach out to us and we&apos;ll respond as soon as possible.
           </p>
+          
+          {/* Prominent Features Callout */}
+          <div className="bg-gradient-to-r from-primary-50 to-primary-100 border-2 border-primary-200 rounded-2xl p-6 max-w-4xl mx-auto mb-8">
+            <div className="grid md:grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl mb-2">🚚</div>
+                <div className="font-bold text-primary-700 text-sm mb-1">Home Delivery Service</div>
+                <div className="text-xs text-gray-600">Available for disabled & elderly patients</div>
+              </div>
+              <div>
+                <div className="text-2xl mb-2">💳</div>
+                <div className="font-bold text-primary-700 text-sm mb-1">All Major Insurance</div>
+                <div className="text-xs text-gray-600">Most insurance plans accepted</div>
+              </div>
+              <div>
+                <div className="text-2xl mb-2">📦</div>
+                <div className="font-bold text-primary-700 text-sm mb-1">Multiple Options</div>
+                <div className="text-xs text-gray-600">Contactless • Curbside • In-store</div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Contact Info Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {contactInfo.map((info, index) => (
             <motion.div
               key={index}
@@ -210,10 +231,13 @@ export default function Contact() {
               </div>
               <div className="mt-6 p-4 bg-primary-50 rounded-xl">
                 <p className="text-sm text-gray-700">
-                  <strong>Free Home Delivery:</strong> Complimentary delivery for disabled and elderly patients
+                  <strong>Home Delivery Service Available:</strong> For disabled and elderly patients
                 </p>
                 <p className="text-sm text-gray-700 mt-2">
                   <strong>Services:</strong> Contactless delivery • Curbside pickup • In-store pickup
+                </p>
+                <p className="text-sm text-gray-700 mt-2">
+                  <strong>Insurance:</strong> We accept all major insurance plans
                 </p>
               </div>
             </div>

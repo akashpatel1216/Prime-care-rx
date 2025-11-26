@@ -38,7 +38,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="inline-block bg-secondary-100 text-secondary-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+            <div className="inline-block bg-primary-100 text-primary-600 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               About PrimeCare Rx
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -46,25 +46,35 @@ export default function About() {
               <span className="text-primary-600">Priority</span>
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              We&apos;re delighted to serve the communities of Spring Hill, FL. We offer complimentary free home delivery service for the disabled and elderly, ensuring everyone has access to the medications and care they need.
+              We&apos;re delighted to serve the communities of Spring Hill, FL. We offer home delivery service available for the disabled and elderly, ensuring everyone has access to the medications and care they need. We accept all major insurance plans.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Our team of experienced pharmacists and healthcare professionals are committed to going beyond just filling prescriptions. We take the time to understand your unique health needs, answer your questions, and provide guidance that empowers you to take control of your wellness journey. With contactless delivery and curbside pickup options, we make healthcare convenient and accessible.
+              As a HealthMart pharmacy, our team of experienced pharmacists and healthcare professionals are committed to going beyond just filling prescriptions. We take the time to understand your unique health needs, answer your questions, and provide guidance that empowers you to take control of your wellness journey. With contactless delivery and curbside pickup options, we make healthcare convenient and accessible.
             </p>
+            <div className="mb-8">
+              <a
+                href="https://www.healthmart.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-600 hover:text-primary-700 font-semibold underline"
+              >
+                Learn more about HealthMart →
+              </a>
+            </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-1">24+</div>
-                <div className="text-sm text-gray-600">Years Combined Experience</div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 mb-8">
+              <div className="text-center bg-gray-50 rounded-xl p-4">
+                <div className="text-2xl sm:text-3xl font-bold text-primary-600 mb-1">16</div>
+                <div className="text-xs sm:text-sm text-gray-600">Years Experience</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-1">10K+</div>
-                <div className="text-sm text-gray-600">Patients Served</div>
+              <div className="text-center bg-gray-50 rounded-xl p-4">
+                <div className="text-2xl sm:text-3xl font-bold text-primary-600 mb-1">10K+</div>
+                <div className="text-xs sm:text-sm text-gray-600">Patients Served</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-1">99%</div>
-                <div className="text-sm text-gray-600">Satisfaction Rate</div>
+              <div className="text-center bg-gray-50 rounded-xl p-4">
+                <div className="text-2xl sm:text-3xl font-bold text-primary-600 mb-1">99%</div>
+                <div className="text-xs sm:text-sm text-gray-600">Satisfaction Rate</div>
               </div>
             </div>
 

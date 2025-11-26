@@ -1,6 +1,7 @@
 "use client";
 
 import { Facebook, Twitter, Instagram, Linkedin, Heart } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,20 +25,26 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-6">
-              <div className="text-3xl font-bold">
-                PrimeCare <span className="text-secondary-400">Rx</span>
+              <div className="relative w-48 h-14 md:w-56 md:h-16 lg:w-64 lg:h-20 flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="PrimeCare Pharmacy Logo"
+                  fill
+                  sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
+                  className="object-contain"
+                />
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Serving Spring Hill, FL with complimentary free home delivery for disabled and elderly patients. Your trusted community pharmacy with contactless delivery and curbside pickup.
+              Serving Spring Hill, FL with home delivery service available for disabled and elderly patients. Your trusted HealthMart pharmacy accepting all major insurance plans. Contactless delivery and curbside pickup available.
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/Primecarepharmacyfl/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary-600 transition-all transform hover:scale-110"
@@ -137,11 +144,31 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <div className="font-semibold text-white mb-1">Services</div>
-                Free Home Delivery<br />
-                Contactless • Curbside Pickup
+                <div className="font-semibold text-white mb-1">Hours</div>
+                Mon-Fri: 9am-5pm<br />
+                Sat-Sun: Closed
+              </li>
+              <li>
+                <div className="font-semibold text-white mb-1">Insurance</div>
+                We accept all major insurance plans
               </li>
             </ul>
+          </div>
+          
+          {/* HealthMart Link */}
+          <div className="md:col-span-2 lg:col-span-1">
+            <h3 className="text-lg font-bold mb-6">HealthMart</h3>
+            <p className="text-gray-400 mb-4 text-sm">
+              Proud member of the HealthMart pharmacy network, providing trusted healthcare services.
+            </p>
+            <a
+              href="https://www.healthmart.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-400 hover:text-primary-300 font-semibold underline text-sm"
+            >
+              Visit HealthMart.com →
+            </a>
           </div>
         </div>
 

@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from "react";
 export default function Statistics() {
   const stats = [
     { number: 4, label: "Licensed Pharmacists", suffix: "" },
-    { number: 24, label: "Years Combined Experience", suffix: "+" },
+    { number: 16, label: "Years Experience", suffix: "" },
     { number: 10000, label: "Prescriptions Filled Annually", suffix: "+" },
     { number: 99, label: "Customer Satisfaction", suffix: "%" },
   ];
@@ -35,7 +35,7 @@ export default function Statistics() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, index) => (
             <StatCard
               key={index}
@@ -106,12 +106,12 @@ function StatCard({ stat, index }: { stat: { number: number; label: string; suff
       viewport={{ once: true }}
       className="text-center"
     >
-      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all transform hover:scale-105">
-        <div className="text-5xl md:text-6xl font-bold text-white mb-2">
+      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 hover:bg-white/20 transition-all transform hover:scale-105">
+        <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-2">
           {count.toLocaleString()}
           {stat.suffix}
         </div>
-        <div className="text-primary-100 font-medium text-sm md:text-base">
+        <div className="text-white/90 font-medium text-xs sm:text-sm md:text-base leading-tight">
           {stat.label}
         </div>
       </div>

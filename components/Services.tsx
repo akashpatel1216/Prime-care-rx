@@ -8,7 +8,7 @@ export default function Services() {
     {
       icon: Pill,
       title: "Prescription Services",
-      description: "Fast, accurate prescription filling with free home delivery for disabled and elderly patients. Contactless delivery and curbside pickup available.",
+      description: "Fast, accurate prescription filling with home delivery service available for disabled and elderly patients. Contactless delivery and curbside pickup available. We accept all major insurance.",
       color: "from-blue-500 to-blue-600",
     },
     {
@@ -47,12 +47,6 @@ export default function Services() {
       description: "Expert guidance on Medicare Part D plans and open enrollment assistance.",
       color: "from-indigo-500 to-indigo-600",
     },
-    {
-      icon: Shield,
-      title: "Durable Medical Equipment",
-      description: "Quality medical supplies including mobility aids, diabetic supplies, and home healthcare products.",
-      color: "from-red-500 to-red-600",
-    },
   ];
 
   return (
@@ -75,10 +69,20 @@ export default function Services() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From prescription management to preventive care, we offer a full range of pharmaceutical services tailored to your needs.
           </p>
+          <div className="mt-4">
+            <a
+              href="https://www.healthmart.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-600 hover:text-primary-700 font-semibold underline"
+            >
+              Learn more about HealthMart Pharmacy Services →
+            </a>
+          </div>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}

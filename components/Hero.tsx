@@ -1,19 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Clock, Heart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-900">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 pt-20 sm:pt-24 md:pt-32">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-0 pb-40 md:pb-32">
+        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -21,32 +21,41 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="text-white"
           >
+            {/* Big Banner */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6"
+              className="mb-6"
+            >
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-4 leading-tight">
+                <span className="text-white drop-shadow-lg">Prime Care</span>
+                <br />
+                <span className="text-white drop-shadow-lg">Pharmacy</span>
+              </h1>
+              <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
+                <p className="text-lg md:text-xl font-semibold text-white">
+                  A HealthMart Pharmacy
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25 }}
+              className="inline-block bg-primary-600/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-4"
             >
               ✨ Serving Spring Hill, FL with Care & Compassion
             </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-            >
-              Healthcare That{" "}
-              <span className="text-secondary-300">Cares</span>
-            </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-primary-100 mb-8 leading-relaxed"
+              className="text-lg md:text-xl text-white mb-8 leading-relaxed max-w-2xl"
             >
-              Experience personalized pharmaceutical care with complimentary free home delivery for disabled and elderly patients. We&apos;re here to serve our Spring Hill community.
+              Experience personalized pharmaceutical care with home delivery service available. We accept all major insurance and proudly serve our Spring Hill community.
             </motion.p>
 
             <motion.div
@@ -69,27 +78,6 @@ export default function Hero() {
                 Contact Us
               </a>
             </motion.div>
-
-            {/* Feature Pills */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4"
-            >
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Shield size={18} className="text-secondary-300" />
-                <span className="text-sm font-medium">Licensed Pharmacists</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Clock size={18} className="text-secondary-300" />
-                <span className="text-sm font-medium">Fast Service</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <Heart size={18} className="text-secondary-300" />
-                <span className="text-sm font-medium">Personal Care</span>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right Content - Stats Cards */}
@@ -97,13 +85,13 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden md:grid grid-cols-2 gap-6"
+            className="hidden lg:grid grid-cols-2 gap-4"
           >
             {[
-              { number: "24+", label: "Years Experience", color: "bg-white" },
-              { number: "10K+", label: "Happy Patients", color: "bg-secondary-500" },
+              { number: "16", label: "Years Experience", color: "bg-white" },
+              { number: "10K+", label: "Happy Patients", color: "bg-white" },
               { number: "99%", label: "Satisfaction Rate", color: "bg-primary-500" },
-              { number: "24/7", label: "Online Support", color: "bg-white" },
+              { number: "All", label: "Major Insurance", color: "bg-white" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -112,10 +100,10 @@ export default function Hero() {
                 transition={{ delay: 0.6 + index * 0.1 }}
                 className={`${
                   stat.color === "bg-white" ? "bg-white text-primary-600" : `${stat.color} text-white`
-                } p-6 rounded-2xl shadow-2xl transform hover:scale-105 transition-all`}
+                } p-5 rounded-2xl shadow-2xl transform hover:scale-105 transition-all`}
               >
-                <div className="text-4xl font-bold mb-2">{stat.number}</div>
-                <div className="text-sm font-medium opacity-80">{stat.label}</div>
+                <div className="text-3xl font-bold mb-2">{stat.number}</div>
+                <div className="text-xs font-medium opacity-80 leading-tight">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -123,8 +111,8 @@ export default function Hero() {
       </div>
 
       {/* Bottom Wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full">
+      <div className="absolute bottom-0 left-0 right-0 z-0 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full" preserveAspectRatio="none">
           <path
             fill="#ffffff"
             fillOpacity="1"

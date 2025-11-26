@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import FeaturesBanner from "@/components/FeaturesBanner";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Statistics from "@/components/Statistics";
@@ -26,6 +27,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation isScrolled={isScrolled} />
       <Hero />
+      <FeaturesBanner />
       <Services />
       <About />
       <Statistics />
