@@ -9,6 +9,7 @@ import About from "@/components/About";
 import Statistics from "@/components/Statistics";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
+import ThankYou from "@/components/ThankYou";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
       <Statistics />
       <Testimonials />
       <Contact />
+      <ThankYou />
       <Footer />
     </main>
   );

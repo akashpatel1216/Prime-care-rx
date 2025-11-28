@@ -2,12 +2,28 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 pt-20 sm:pt-24 md:pt-32">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-24 md:pt-32">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/patient.jpeg"
+          alt="Pharmacist with patient background"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600/85 via-primary-700/80 to-primary-800/85"></div>
+      </div>
+
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 z-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-400 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
