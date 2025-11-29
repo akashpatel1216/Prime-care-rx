@@ -14,9 +14,26 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    alert("Thank you for your message! We'll get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    
+    // Create email subject and body
+    const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || 'Not provided'}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    // Create mailto link
+    const mailtoLink = `mailto:primecarerxpharmacy@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form after a short delay
+    setTimeout(() => {
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    }, 100);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

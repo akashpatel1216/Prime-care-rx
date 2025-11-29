@@ -6,6 +6,7 @@ const nextConfig = {
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
+    qualities: [75, 90, 100],
   },
 };
 
