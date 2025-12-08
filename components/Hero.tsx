@@ -45,9 +45,9 @@ export default function Hero() {
               className="mb-6"
             >
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-4 leading-tight">
-                <span className="text-white drop-shadow-lg">Prime Care</span>
+                <span className="text-white drop-shadow-lg uppercase">PRIME CARE</span>
                 <br />
-                <span className="text-white drop-shadow-lg">Pharmacy</span>
+                <span className="text-white drop-shadow-lg uppercase">PHARMACY</span>
               </h1>
               <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
                 <p className="text-lg md:text-xl font-semibold text-white">
